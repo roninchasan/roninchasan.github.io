@@ -1,0 +1,769 @@
+@font-face{
+    font-family: "Kayak Sans Regular";
+    src: url("fonts/kayak-sans/ksr.otf");
+}
+
+@font-face{
+    font-family: "Kayak Sans Regular";
+    src: url("fonts/kayak-sans/ksbold.otf");
+    font-weight: bold;
+}
+
+html{
+    background-image: linear-gradient(rgb(74, 189, 255), rgb(27, 27, 255));
+    color: white;
+    font-family: "Kayak Sans Regular";
+}
+
+header{
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+body{
+    margin: 0;
+}
+
+#home h1{
+    font-size: 7em;
+}
+
+#home h2{
+    font-size: 3em;
+}
+
+#main-head{
+    text-align: center;
+    font-size: 6em;   
+    margin: 0;
+    font-stretch: expanded;
+}
+
+#sub-head{
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0;  
+}
+
+#header-line{
+    width: 50%;
+    margin-top: 1em;
+}
+
+#main-head-first{
+    text-align: center;
+    font-size: 6em;
+    animation-name: title;
+    animation-duration: 2.5s;
+    margin: 0;
+    font-stretch: expanded;
+}
+
+#sub-head-first{
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0;
+    animation-name: subtitle;
+    animation-duration: 2.5s;
+}
+
+#header-line-first{
+    width: 50%;
+    margin-top: 1em;
+    animation-name: line-expand;
+    animation-duration: 2.5s;
+}
+
+.line{
+    width: 60%;
+    margin-top: 1.5em;
+}
+
+@keyframes title {
+    from {margin-right: 40%; opacity: 0;}
+    to {margin: 0; opacity: 100%;}
+}
+
+@keyframes subtitle {
+    from {margin-left: 30%;  opacity: 0;}
+    to {margin: 0;  opacity: 100%;}
+}
+
+@keyframes line-expand {
+    from {width: 0;}
+    to {width: 50%;}
+}
+
+footer{
+    background-color: darkblue;
+    height: 6.5em;
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: .75em;
+}
+
+footer ul{
+    margin-bottom: 0;
+    padding-top: 3em;
+    margin-left: -1.5em;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+    animation-name: nav;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+}
+
+footer li{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+#footer-menu li :hover {
+    color: white;    
+}
+
+#footer-menu a{
+    color: darkgrey;
+    text-decoration: none;
+}
+
+.icon-cite{
+    font-size: .7em;
+    color: grey;
+    float: right;
+    margin-top: 3em;
+    margin-right: -14.75em;
+}
+
+@keyframes nav {
+    from {opacity: 0;}
+    to {opacity: 100%;}
+}
+
+#navbar{
+    height: 2em;
+    width: 100%;
+    margin-bottom: 0;
+
+    animation-name: nav;
+    animation-duration: 1.5s;
+    animation-delay: 0;
+    animation-fill-mode: both;
+}
+
+#navbar-first{
+    height: 2em;
+    width: 100%;
+    margin-bottom: 0;
+
+    animation-name: nav;
+    animation-duration: 2s;
+    animation-delay: 2.5s;
+    animation-fill-mode: both;
+}
+
+#navbar ul, #navbar-first ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 1em;
+}
+
+#navbar li, #navbar-first li{
+    margin: 0 1em 0 1em;
+}
+
+#navbar li :hover {
+    color: grey;    
+}
+
+#navbar-first li :hover {
+    color: grey;    
+}
+
+#navbar a, #navbar-first a{
+    color: white;
+    text-decoration: none;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+@keyframes content {
+    from {margin-top: 15%;  opacity: 0;}
+    to {margin-top: 0; opacity: 100%;}
+}
+
+.card{
+    width: 65%;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 1em auto 2em auto;
+    padding: 2em;
+    line-height: 2em;
+
+    background-color: rgb(0, 53, 197);
+    opacity: 85%;
+    background-blend-mode: overlay;
+}
+
+.card:hover{
+    width: 67%;
+    font-size: 1.2em;
+    opacity: 100%;
+    margin: 1em auto 1em auto;
+
+}
+
+.card:hover h3{
+    font-size: 1.7em;
+}
+
+.card:hover .column-head{
+    font-size: 1.6em;
+}
+
+.card h3 {
+    font-size: 1.6em;
+
+}
+
+.card p, li {
+    font-size: 1.2em;
+}
+
+.intro-list {
+    margin:  -1em 0 -1em .5em;
+    list-style-type: square;
+    
+}
+
+.column-head{
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: -.25em;
+}
+
+#about-1{
+    animation-name: content;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+}
+#about-2{
+    animation-name: content;
+    animation-duration: 2s;
+    animation-delay: 3.5s;
+    animation-fill-mode: both;
+}
+
+#about-3{
+    animation-name: content;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+}
+
+.intro-first{
+    width: 70%;
+    margin: 2em auto 1em auto;
+    line-height: 2em;
+    font-size: 1.5em;
+
+    animation-name: content;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+
+.intro{
+    width: 70%;
+    margin: 2em auto 1em auto;
+    line-height: 2em;
+    font-size: 1.5em;
+}
+
+.intro-header{
+    width: 80%;
+    margin: 1em auto 1em auto;
+    line-height: 1.5em;
+    font-size: 1.5em;
+}
+
+#card-col-left{
+    width: 30%;
+    margin-right:4.5%;
+}
+
+#card-col-center{
+    width: 30%;
+    margin-right:4.5%;
+}
+
+#card-col-right{
+    width: 30%;
+}
+
+.large-icon{
+    width: 65%;
+    margin-left: 17.5%;
+    margin-bottom: -1em;
+}
+
+.column-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.column-container h2{
+    text-align: center;
+}
+
+.column-container .card{
+    width: 80%;
+}
+
+.column-left{
+    width: 50%;
+
+    animation-name: content;
+    animation-duration: 3s;
+    animation-delay: 3.5s;
+    animation-fill-mode: both;
+}
+
+.column-right{
+    width: 50%;
+
+    animation-name: content;
+    animation-duration: 3s;
+    animation-delay: 4.5s;
+    animation-fill-mode: both;
+}
+
+.column-normal{
+    width: 50%;
+}
+
+.top, .second{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 2em;
+}
+
+.second{
+    font-size: .9em;
+    color: lightgrey;
+    height: 2.5em;
+    line-height: 1.4em;
+}
+
+#resume{
+    animation-name: content;
+    animation-duration: 3.5s;
+    animation-delay: 3s;
+    animation-fill-mode: both;
+}
+
+.resume-list{
+    margin: 2em 1.5em 1em 1em;
+}
+
+.card a{
+    color: lightblue;
+
+}
+
+.icon{
+    height:50px;
+    width: 50px;
+    float: right;
+    margin: -2em 1.5em 1em 1em;
+
+    animation-name: nav;
+    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-fill-mode: both;
+}
+
+#email{
+    background-color: rgb(15, 125, 180);
+    /* background-color: rgb(74, 189, 255); */
+
+    border-radius: 6px;
+    margin-right: 1%;
+}
+
+#email:hover{
+    background-color: rgb(74, 189, 255);
+    
+    box-shadow: 0.2em 0.2em 0.1em black;
+}
+
+#linkedin:hover{
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0.2em 0.2em 0.1em black;
+}
+
+.section-first{
+    width: 70%;
+    padding: 2em 15% 2em 15%;
+
+    animation-name: nav;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+.section{
+    width: 70%;
+    padding: 2em 15% 2em 15%;
+}
+
+.section p, .section-first p{
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+.section h2, .section-first h2{
+    font-size: 1.7em;
+    line-height: 1.3em;
+}
+
+.section h3, .section-first h3{
+    font-size: 1.4em;
+    line-height: 1.3em;
+}
+
+#sec1{
+    background-color: rgb(235, 235, 235);
+    color: darkblue;
+    animation-delay: 4s;
+
+}
+#sec2{
+    background-color: black;
+    color: lightgrey;
+    animation-delay: 4.75s;
+
+}
+#sec3{
+    background-color: rgb(87, 10, 0);
+    color: white;
+    animation-delay: 5.5s;
+    margin-bottom: -1em;
+}
+
+.project-card{
+    width: auto;
+    max-width: 47.5%;
+    min-width: 20em;
+    border-radius: 2px;
+    margin: 2em auto 2em auto;
+    line-height: 2em;
+
+    background-blend-mode: overlay;
+}
+
+.project-card p{
+    padding-bottom: .5em;
+}
+
+.project-card img{
+    width: 100%;
+    margin-top: -.025em;
+}
+
+.project-card a{
+    text-decoration: none;
+}
+
+.project-card h4{
+    font-size: 1.3em;
+    margin: 1em;
+}
+
+.web-dev{
+    background-color: rgb(0, 53, 197);
+    color: white;
+    min-height: 36em;
+
+}
+
+.web-dev p{
+    color: white;
+    font-size: 1.2em;
+    margin: 1em;
+}
+
+.project-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.sidenote{
+    font-size: .8em;
+    padding-top: 1em;
+}
+
+.data-science{
+    background-color: lightgrey;
+    color: black;
+    min-height: 34em;
+
+}
+
+.data-science p{
+    font-size: 1.2em;
+    margin: 1em;
+    color: black;
+
+}
+
+.data-science a{
+    color: black;
+}
+
+.software{
+    background-color: black;
+    color: white;
+    min-height: 36em;
+
+}
+
+.software p{
+    color: white;
+    font-size: 1.2em;
+    margin: 1em;
+}
+
+@media screen and (max-width: 600px){
+    #navbar ul{
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    #navbar li{
+        margin: 0 10% 0 10%;
+    }
+
+    #navbar-first ul{
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    #navbar-first li{
+        margin: 0 10% 0 10%;
+    }
+
+    footer{
+        height: 15.5em;
+        padding-bottom: .25em;
+    }
+
+    footer ul{
+        flex-direction: column;
+        margin: 0 0 0 .5em;
+        width: 45%;
+        
+    }
+    footer li{
+        margin: .5em 0 .5em 0;
+
+    }
+    .icon{
+        margin-top: -7em;
+        margin-right: 7em;
+    }
+
+    .icon-cite{
+        margin-right: .75em;
+        margin-top: 1em;
+    }
+
+    #email{
+        margin-right: 2em;
+    }
+    .column-container{
+        flex-direction: column;
+    }
+    .column-container .intro{
+        font-size: 1.8em;
+        line-height: 1.5em;
+        padding-top: 1em;
+        text-align: center;
+        margin-bottom: .2em;
+    }
+
+    .column-left, .column-right, .column-normal{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .section, .section-first{
+        padding-left: 5%;
+        width: 90%;
+        padding-right: 5%;
+    }
+
+}
+
+@media screen and (max-width: 850px){
+    .top, .second{
+        flex-direction: column;
+    }
+
+    .second{
+        margin-top: 6em;
+    }
+    .top h2, .second h2{
+        margin: 0;
+        margin-bottom: 2em;
+        height: 1.5em;
+    }
+    .org{
+        margin-bottom: 0;
+    }
+
+    .top h3, .second h3{
+        margin: 0;
+        margin-bottom: 2em;
+
+        height: 1.5em;
+    }
+
+    .resume-list{
+        margin-top: 6em;
+    }
+
+    #index-col-container{
+        flex-direction: column;
+    }
+
+    #card-col-left{
+        width: 100%;
+        margin-right:0;
+    }
+    
+    #card-col-center{
+        width: 100%;
+        margin-right:0;
+    }
+    
+    #card-col-right{
+        width: 100%;
+    }
+
+    #top{
+        margin-top: 0;
+    }
+    .large-icon{
+        width: 50%;
+        margin-top: 4em;
+        margin-left: 25%;
+        margin-bottom: -2em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #main-head-first{
+        text-align: center;
+        font-size: 6em;
+        line-height: 1em;
+        animation-name: title-small;
+        animation-duration: 3s;
+        margin: 0 0 .15em 0;
+        font-stretch: expanded;
+    }
+    
+    #sub-head-first{
+        text-align: center;
+        font-size: 2.5em;
+        margin: 0;
+        animation-name: subtitle-small;
+        animation-duration: 3s;
+    }
+
+    #main-head{
+        text-align: center;
+        font-size: 4.5em;
+        line-height: 1em;
+        margin: 0 0 .15em 0;
+        font-stretch: expanded;
+    }
+    
+    #sub-head{
+        text-align: center;
+        font-size: 2.25em;
+        margin: 0;
+    }
+    
+    @keyframes title-small {
+        from {margin-right: 10%; opacity: 0;}
+        to {margin: 0 0 .15em 0; opacity: 100%;}
+    }
+    
+    @keyframes subtitle-small {
+        from {margin-left: 5%;  opacity: 0;}
+        to {margin: 0;  opacity: 100%;}
+    }
+    
+
+}
+
+@media screen and (max-width: 780px) and (min-width: 742px) {
+    #main-head{
+        text-align: center;
+        font-size: 6em;
+        line-height: 1em;
+        margin: 0 0 .15em 0;
+        font-stretch: expanded;
+    }
+
+    #main-head-first{
+        text-align: center;
+        font-size: 6em;
+        line-height: 1em;
+        animation-name: title-tablet;
+        animation-duration: 4s;
+        margin: 0 0 .15em 0;
+        font-stretch: expanded;
+    }
+    
+    #sub-head{
+        text-align: center;
+        font-size: 2.5em;
+        margin: 0;
+        
+    }
+
+    #sub-head-first{
+        text-align: center;
+        font-size: 2.5em;
+        margin: 0;
+        animation-name: subtitle-tablet;
+        animation-duration: 4s;
+    }
+    
+    @keyframes title-tablet {
+        from {margin-top: 10%; opacity: 0;}
+        to {margin: 0 0 .15em 0; opacity: 100%;}
+    }
+    
+    @keyframes subtitle-tablet {
+        from {margin-top: 10%; opacity: 0;}
+        to {margin: 0; opacity: 100%;}
+    }
+}
