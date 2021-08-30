@@ -381,6 +381,14 @@ footer li{
     line-height: 1.4em;
 }
 
+.org, .place{
+    margin-top: 0;
+}
+
+.role, .time{
+    margin-top: 10px;
+}
+
 #resume{
     animation-name: content;
     animation-duration: 3.5s;
@@ -389,7 +397,7 @@ footer li{
 }
 
 .resume-list{
-    margin: 2em 1.5em 1em 1em;
+    margin: 1em 1.5em 2em 1em;
 }
 
 .card a{
