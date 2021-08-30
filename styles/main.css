@@ -178,7 +178,6 @@ footer li{
 #navbar li, #navbar-first li{
     margin: 0 1em 0 1em;
 
-    transition-duration: 0.5s;
 }
 
 #navbar li :hover {
@@ -192,6 +191,8 @@ footer li{
 #navbar a, #navbar-first a{
     color: white;
     text-decoration: none;
+
+    transition-duration: 0.5s;
 }
 
 .container{
