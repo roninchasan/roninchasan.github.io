@@ -184,9 +184,10 @@
 
             let sections = document.getElementsByClassName("section");
 
-            for(i=0;i<sections.length; i++){
-                sections[i].classList.remove("section");
-                sections[i].classList.add("section-first");
+            for(var i=0; i < sections.length; i++){
+                // sections[i].classList.remove("section");
+                // sections[i].classList.add("section-first");
+                sections[i].className="section-first";
             }
 
             let intro = document.getElementsByClassName("intro")[0];
