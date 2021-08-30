@@ -119,12 +119,6 @@ footer ul{
 footer li{
     margin-left: 3%;
     margin-right: 3%;
-
-    transition-duration: 0.5s;
-}
-
-#footer-menu li {
-    transition-duration: 0.5s;    
 }
 
 #footer-menu li :hover {
@@ -134,6 +128,7 @@ footer li{
 #footer-menu a{
     color: darkgrey;
     text-decoration: none;
+    transition-duration: 0.35s;
 }
 
 .icon-cite{
@@ -196,7 +191,7 @@ footer li{
     color: white;
     text-decoration: none;
 
-    transition-duration: 0.5s;
+    transition-duration: 0.35s;
 }
 
 .container{
