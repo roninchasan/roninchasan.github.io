@@ -1,10 +1,3 @@
-<?php 
-$cookie_name = "repeat-visit-classes";
-setcookie($cookie_name, 'TRUE', time() + (3600));
-
-$title = "Classes";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,31 +6,33 @@ $title = "Classes";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <title>Ronin Chasan - <?php echo $title ?></title>
+    <title>Ronin Chasan - Classes</title>
     <meta name="description" content="The classes I have taken that have helped me build the skills to build this site and an array of other projects">
     <meta name="keywords" content="Ronin Chasan, Web Dev, Software, Data Science">
     <meta name="author" content="Ronin Chasan">
 </head>
 
 <body>
-    <?php 
-    if(!isset($_COOKIE[$cookie_name])) {
-        //first time visit (yes animations)
-        include("includes/first-navbar.php"); 
-        include("includes/first-header.php"); 
-    }else{
-        //repeat visit (no animations)
-        include("includes/navbar.php"); 
-        include("includes/header.php");
-    }    
-    ?>
+    <nav id ="navbar">
+        <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='resume.html'>Résumé</a></li>
+            <li><a href='projects.html'>Projects</a></li>
+        </ul>
+    </nav>
 
-    <div <?php if(!isset($_COOKIE[$cookie_name])) { echo "class='intro-first'";} else { echo "class='intro'";}?>>
+    <header id="home">
+        <h1 id="main-head">Ronin Chasan</h1>
+        <h2 id="sub-head">Software, Web Dev, and Data Science</h2>
+        <hr id='header-line'>
+    </header>
+
+    <div class='intro'>
         <p>Throughout my time in high school and at Cornell, I've taken a number of courses that have helped give
             me the skills and knowledge to get me where I am today. Below is a list and short description of some of these courses.</p>
     </div>
     <div class="column-container">
-        <div <?php if(!isset($_COOKIE[$cookie_name])) { echo "class='column-left'";} else { echo "class='column-normal'";}?>>
+        <div id="col-left" class='column-normal'>
             <h2 class="intro-header">Major-relevant courses</h2>
             <div class="card">
                 <h2>INFO 2950 – Intro to Data Science</h2>
@@ -88,7 +83,7 @@ $title = "Classes";
             </div>
         </div>
 
-        <div <?php if(!isset($_COOKIE[$cookie_name])) { echo "class='column-right'";} else { echo "class='column-normal'";}?>>
+        <div id="col-right" class='column-normal'>
             <h2 class="intro-header">Minor-relevant courses and High School courses</h2>
             <div class="card">
                 <h2>AEM 1200 – Introduction to Business Management</h2>
@@ -128,10 +123,10 @@ $title = "Classes";
     <footer>
         <nav id ="footer-menu">
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="resume.php">Résumé</a></li>
-                <li><a href="classes.php">Classes</a></li>
-                <li><a href="projects.php">Projects</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Résumé</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="projects.html">Projects</a></li>
             </ul>
         </nav>
         <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ronin-chasan">
@@ -143,6 +138,44 @@ $title = "Classes";
         
         <cite class="icon-cite">All icons are from flaticon.com</cite>
     </footer>
+
+
+<script>
+        let cookie = getCookie("repeat-visit-classes");
+
+        if (cookie == ""){
+            //first visit
+            document.getElementById("navbar").id = "navbar-first";
+
+            document.getElementById("main-head").id = "main-head-first";
+            document.getElementById("sub-head").id = "sub-head-first";
+            document.getElementById("header-line").id = "header-line-first";
+
+            document.getElementById("col-left").classList.add("column-left");
+            document.getElementById("col-left").classList.remove("column-normal");
+
+            document.getElementById("col-right").classList.add("column-right");
+            document.getElementById("col-right").classList.remove("column-normal");
+
+            // let sections = document.getElementsByClassName("section");
+
+            // for(i=0;i<sections.length; i++){
+            //     sections[i].classList.remove("section");
+            //     sections[i].classList.add("section-first");
+            // }
+
+            let intro = document.getElementsByClassName("intro")[0];
+            intro.classList.remove("intro");
+            intro.classList.add("intro-first");
+            
+        } else {
+            //repeat visit
+
+        }
+
+
+        document.cookie = "repeat-visit-classes=true";
+    </script>
 </body>
 
 </html>

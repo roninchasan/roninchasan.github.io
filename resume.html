@@ -1,10 +1,3 @@
-<?php 
-$cookie_name = "repeat-visit-resume";
-setcookie($cookie_name, 'TRUE', time() + (3600));
-
-$title = "Résumé";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,31 +6,34 @@ $title = "Résumé";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <title>Ronin Chasan - <?php echo $title ?></title>
+    <title>Ronin Chasan - Résumé</title>
     <meta name="description" content="A detailed account of my professional and extracurricular experiences.">
     <meta name="keywords" content="Ronin Chasan, Web Dev, Software, Data Science">
     <meta name="author" content="Ronin Chasan">
 </head>
 <body>
 
-    <?php 
-        if(!isset($_COOKIE[$cookie_name])) {
-            //first time visit (yes animations)
-            include("includes/first-navbar.php"); 
-            include("includes/first-header.php"); 
-        }else{
-            //repeat visit (no animations)
-            include("includes/navbar.php"); 
-            include("includes/header.php");
-        }    
-    ?>
+    
+    <nav id ="navbar">
+        <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='classes.html'>Classes</a></li>
+            <li><a href='projects.html'>Projects</a></li>
+        </ul>
+    </nav>
 
-    <div <?php if(!isset($_COOKIE[$cookie_name])) { echo "class='intro-first'";} else { echo "class='intro'";}?>>
+    <header id="home">
+        <h1 id="main-head">Ronin Chasan</h1>
+        <h2 id="sub-head">Résumé</h2>
+        <hr id='header-line'>
+    </header>
+
+    <div class='intro'>
         <p>Accompanying my years of courses in information technology have been a number of real world and extracurricular
             experiences. These have helped give me a better sense of how businesses and groups function, interact, and produce, not
             to mention give me new connections and skills. I've selected a relevant few of these experiences and listed what I did below.</p>
     </div>
-    <div class="container" <?php if(!isset($_COOKIE[$cookie_name])) { echo "id='resume'";}?>>
+    <div class="container" id="res-section">
         <div class="card">
             <div class="top">
                 <h2 class="org">Cornell Hyperloop Project Team</h2>
@@ -134,10 +130,10 @@ $title = "Résumé";
     <footer>
         <nav id ="footer-menu">
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="resume.php">Résumé</a></li>
-                <li><a href="classes.php">Classes</a></li>
-                <li><a href="projects.php">Projects</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Résumé</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="projects.html">Projects</a></li>
             </ul>
         </nav>
         <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ronin-chasan">
@@ -150,5 +146,39 @@ $title = "Résumé";
         <cite class="icon-cite">All icons are from flaticon.com</cite>
     </footer>
 </body>
+
+<script>
+        let cookie = getCookie("repeat-visit-resume");
+
+        if (cookie == ""){
+            //first visit
+            document.getElementById("navbar").id = "navbar-first";
+
+            document.getElementById("main-head").id = "main-head-first";
+            document.getElementById("sub-head").id = "sub-head-first";
+            document.getElementById("header-line").id = "header-line-first";
+
+            document.getElementById("res-section").id = "resume";
+
+            // let sections = document.getElementsByClassName("section");
+
+            // for(i=0;i<sections.length; i++){
+            //     sections[i].classList.remove("section");
+            //     sections[i].classList.add("section-first");
+            // }
+
+            let intro = document.getElementsByClassName("intro")[0];
+            intro.classList.remove("intro");
+            intro.classList.add("intro-first");
+            
+        } else {
+            //repeat visit
+
+        }
+
+
+        document.cookie = "repeat-visit-resume=true";
+    </script>
+
 
 </html>
