@@ -123,6 +123,10 @@ footer li{
     transition-duration: 0.5s;
 }
 
+#footer-menu li {
+    transition-duration: 0.5s;    
+}
+
 #footer-menu li :hover {
     color: white;    
 }
