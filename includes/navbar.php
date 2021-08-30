@@ -14,3 +14,13 @@
         ?>
     </ul>
 </nav>
+
+
+<!-- <nav id ="navbar">
+    <ul>
+        <li><a href='index.php'>Home</a></li>
+        <li><a href='resume.php'>Résumé</a></li>
+       <li><a href='classes.php'>Classes</a></li>
+        <li><a href='projects.php'>Projects</a></li>
+    </ul>
+</nav> -->

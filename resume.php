@@ -44,8 +44,17 @@ $title = "Résumé";
                 <h3 class="place">Ithaca, NY</h3>
             </div>
             <div class="second">
+                <h2 class="role">Web Development/Business Sub Team Lead</h2>
+                <h3 class="time">February 2021 - Present</h3>
+            </div>
+            <ul class="resume-list">
+                <li>Lead and direct team in debugging, remodeling, and adding new content to <a target="_blank" rel="noopener noreferrer" href="https://hyperloop.cornell.edu/">team website</a>; run weekly meetings with sub team</li>
+                <li>Participate in weekly meetings with other team leads to help determine direction and priorities of the project team</li>
+                <li>Assisted in managing the public face of the project team to both students and sponsors</li>
+            </ul>
+            <div class="second">
                 <h2 class="role">Web Development/Business Sub Team Member</h2>
-                <h3 class="time">February 2020 - Present</h3>
+                <h3 class="time">February 2020 - February 2021</h3>
             </div>
             <ul class="resume-list">
                 <li>Collaborate with other sub team members in debugging/remodeling <a target="_blank" rel="noopener noreferrer" href="https://hyperloop.cornell.edu/">existing website</a>, adding new content to site</li>
@@ -122,7 +131,24 @@ $title = "Résumé";
         </div>
     </div>
 
-    <?php include("includes/footer.php"); ?>
+    <footer>
+        <nav id ="footer-menu">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="resume.php">Résumé</a></li>
+                <li><a href="classes.php">Classes</a></li>
+                <li><a href="projects.php">Projects</a></li>
+            </ul>
+        </nav>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ronin-chasan">
+            <img alt="LinkedIn Icon" src="../images/linkedin.png" class="icon" id="linkedin">
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="mailto:roninchasan@gmail.com">
+            <img alt="Email Icon" src="../images/email-icon.png" class="icon" id="email">
+        </a>
+        
+        <cite class="icon-cite">All icons are from flaticon.com</cite>
+    </footer>
 </body>
 
 </html>

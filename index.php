@@ -1,9 +1,3 @@
-<?php 
-$cookie_name = "repeat-visit-home";
-setcookie($cookie_name, 'TRUE', time() + (3600));
-
-$title = "Home";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,23 +10,28 @@ $title = "Home";
     <title>Ronin Chasan - <?php echo $title ?></title>
     <meta name="keywords" content="Ronin Chasan, Web Dev, Software, Data Science">
     <meta name="author" content="Ronin Chasan">
+    <script src="scripts/script.js"></script>
 </head>
 
 <body>
-    <?php 
-    if(!isset($_COOKIE[$cookie_name])) {
-        //first time visit (yes animations)
-        include("includes/first-navbar.php"); 
-        include("includes/first-header.php"); 
-    }else{
-        //repeat visit (no animations)
-        include("includes/navbar.php"); 
-        include("includes/header.php");
-    }    
-    ?>
+
+    <nav id ="navbar">
+        <ul>
+            <li><a href='index.php'>Home</a></li>
+            <li><a href='resume.php'>Résumé</a></li>
+            <li><a href='classes.php'>Classes</a></li>
+            <li><a href='projects.php'>Projects</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1 id="main-head">Ronin Chasan</h1>
+        <h2 id="sub-head">Software, Web Dev, and Data Science</h2>
+        <hr id='header-line'>
+    </header>
 
     <div class="container">
-        <div class="card" <?php if(!isset($_COOKIE[$cookie_name])) { echo "id='about-1'";} ?>>
+        <div class="card" id="about1">
             <h3>Who am I?</h3>
             <p>My name is Ronin and I'm part of the Class of 2022 at Cornell Univeristy.
                 I'm purusing a B.S. degree in Information Science, with concentrations in Data Science
@@ -42,7 +41,7 @@ $title = "Home";
                 brought me to where I am today. So, I invite you to take a look around my website and see what I have to offer.</p>
         </div>
 
-        <div class="card" <?php if(!isset($_COOKIE[$cookie_name])) { echo "id='about-2'";} ?>>
+        <div class="card" id="about2">
             <h3>What do I do?</h3>
             <div class="column-container" id="index-col-container">
                 <div id="card-col-left">
@@ -87,12 +86,52 @@ $title = "Home";
                 </div>
             </div>
         </div>
-        <div class="card" <?php if(!isset($_COOKIE[$cookie_name])) { echo "id='about-3'";} ?>>
+        <div class="card" id="about3">
             <h3>How might you get in touch with me?</h3>
             <p>If you see something you like, please feel free to contact me for employment, freelance, hobby inquiry or just to say hello at my email or on my LinkedIn! You'll find links to both at the bottom of each page.</p>
         </div>
     </div>
-    <?php include("includes/footer.php"); ?>
+    <footer>
+        <nav id ="footer-menu">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="resume.php">Résumé</a></li>
+                <li><a href="classes.php">Classes</a></li>
+                <li><a href="projects.php">Projects</a></li>
+            </ul>
+        </nav>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ronin-chasan">
+            <img alt="LinkedIn Icon" src="../images/linkedin.png" class="icon" id="linkedin">
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="mailto:roninchasan@gmail.com">
+            <img alt="Email Icon" src="../images/email-icon.png" class="icon" id="email">
+        </a>
+        
+        <cite class="icon-cite">All icons are from flaticon.com</cite>
+    </footer>
 </body>
 
+    <script>
+        let cookie = getCookie("repeat-visit-home");
+
+        if (cookie == ""){
+            //first visit
+            document.getElementById("navbar").id = "navbar-first";
+
+            document.getElementById("main-head").id = "main-head-first";
+            document.getElementById("sub-head").id = "sub-head-first";
+            document.getElementById("header-line").id = "header-line-first";
+
+            document.getElementById("about1").id = "about-1";
+            document.getElementById("about2").id = "about-2";
+            document.getElementById("about3").id = "about-3";
+            
+        } else {
+            //repeat visit
+
+        }
+
+
+        document.cookie = "repeat-visit-home=true";
+    </script>
 </html>
