@@ -214,14 +214,7 @@ footer li{
     opacity: 85%;
     background-blend-mode: overlay;
 
-    transition-property: font-size;
-    transition-duration: 2s;
-    transition-property: width;
-    transition-duration: 2s;
-    transition-property: opacity;
-    transition-duration: 2s;
-    transition-property: margin;
-    transition-duration: 2s;
+    transition-duration: 0.5s;
 }
 
 .card:hover{
