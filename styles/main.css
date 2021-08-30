@@ -119,6 +119,8 @@ footer ul{
 footer li{
     margin-left: 3%;
     margin-right: 3%;
+
+    transition-duration: 0.5s;
 }
 
 #footer-menu li :hover {
@@ -175,6 +177,8 @@ footer li{
 
 #navbar li, #navbar-first li{
     margin: 0 1em 0 1em;
+
+    transition-duration: 0.5s;
 }
 
 #navbar li :hover {
@@ -403,6 +407,8 @@ footer li{
     animation-duration: 2s;
     animation-delay: 5s;
     animation-fill-mode: both;
+
+    transition-duration: 0.5s;
 }
 
 #email{
