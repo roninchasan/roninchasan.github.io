@@ -90,7 +90,7 @@
             </a>
         </div>
     </div>
-    <div class='section' id="sec2">
+    <div class="section" id="sec2">
         <h2>Data Science</h2>
         <p>More recently, I've picked up introductory data science as a skill. Creating Jupyter notebooks with Python code, I've created an assortment of smaller analyses/exercises in class and have completed one full length analysis in a group project.</p>
         <div class="project-container">
@@ -178,15 +178,9 @@
             document.getElementById("sub-head").id = "sub-head-first";
             document.getElementById("header-line").id = "header-line-first";
 
-            // document.getElementById("about1").id = "about-1";
-            // document.getElementById("about2").id = "about-2";
-            // document.getElementById("about3").id = "about-3";
-
             let sections = document.getElementsByClassName("section");
 
             for(var i=0; i < sections.length; i++){
-                // sections[i].classList.remove("section");
-                // sections[i].classList.add("section-first");
                 sections[i].className="section-first";
             }
 
@@ -200,7 +194,7 @@
         }
 
 
-        document.cookie = "repeat-visit-projects=true";
+        document.cookie = "repeat-visit-projects=true; path=/";
     </script>
 
 </html>
