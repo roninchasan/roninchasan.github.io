@@ -1,0 +1,16 @@
+Skill,Rating,Class
+Python,8,general
+Java,6,general
+UX/UI Design,7,general
+Data Struct.,7,general
+HTML,9,web
+CSS/Bootstrap,9,web
+JavaScript,8,web
+Vue.js,6,web
+SQL,7,web
+Node.js,5,web
+Data Modeling,7,data
+Supervised ML,7,data
+Pandas,7,data
+SK-Learn,6,data
+SciPy,5,data

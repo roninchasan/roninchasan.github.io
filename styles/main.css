@@ -13,6 +13,7 @@ html{
     background-image: linear-gradient(rgb(74, 189, 255), rgb(27, 27, 255));
     color: white;
     font-family: "Kayak Sans Regular";
+    overflow-x: hidden;
 }
 
 header{
@@ -136,7 +137,7 @@ footer li{
     color: grey;
     float: right;
     margin-top: 3em;
-    margin-right: -14.75em;
+    margin-right: -21.5em;
 }
 
 @keyframes nav {
@@ -221,20 +222,22 @@ footer li{
     transition-duration: 0.5s;
 }
 
-.card:hover{
-    width: 67%;
-    font-size: 1.2em;
-    opacity: 100%;
-    margin: 1em auto 1em auto;
+@media screen and (min-width: 787px){
+    .card:hover{
+        width: 69%;
+        font-size: 1.2em;
+        opacity: 100%;
+        margin: 1em auto 1em auto;
 
-}
+    }
 
-.card:hover h3{
-    font-size: 1.7em;
-}
+    .card:hover h3{
+        font-size: 1.7em;
+    }
 
-.card:hover .column-head{
-    font-size: 1.6em;
+    .card:hover .column-head{
+        font-size: 1.6em;
+    }
 }
 
 .card h3 {
@@ -408,8 +411,7 @@ footer li{
 .icon{
     height:50px;
     width: 50px;
-    float: right;
-    margin: -2em 1.5em 1em 1em;
+    margin: -2em 1% 1em 2em;
 
     animation-name: nav;
     animation-duration: 2s;
@@ -419,24 +421,37 @@ footer li{
     transition-duration: 0.5s;
 }
 
+#icon-container{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-right: 1em
+}
+
 #email{
     background-color: rgb(15, 125, 180);
     /* background-color: rgb(74, 189, 255); */
-
     border-radius: 6px;
-    margin-right: 1%;
 }
 
 #email:hover{
-    background-color: rgb(74, 189, 255);
-    
-    box-shadow: 0.2em 0.2em 0.1em black;
+    background-color: rgb(74, 189, 255); 
+    box-shadow: 0 0 0.5em 0.1em grey;
 }
 
 #linkedin:hover{
     background-color: white;
     border-radius: 6px;
-    box-shadow: 0.2em 0.2em 0.1em black;
+    box-shadow: 0 0 0.5em 0.1em grey;
+}
+
+#github{
+}
+
+#github:hover{
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 0 0.5em 0.1em grey;
 }
 
 .section-first{
@@ -571,7 +586,45 @@ footer li{
     margin: 1em;
 }
 
+#skill-buttons{
+    display:flex;
+    justify-content: space-between;
+}
+#skill-buttons button{
+    width: 30%;
+    height: 3em;
+    background-color: navy;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-family: Kayak Sans Regular;
+    font-weight: 600;
+    font-size: 1.1em;
+    box-shadow: 0 0 7px 1px white;
+    transition: all 0.25s;
+}
+
+.active-button{
+    background-color: white  !important;
+    color: navy  !important;
+    cursor: default !important;
+}
+
+#skill-buttons button:hover{
+    cursor: pointer;
+    background-color: dodgerblue;
+}
+
 @media screen and (max-width: 600px){
+
+    #home h1{
+        font-size: 6em;
+    }
+
+    #home h2{
+        font-size: 2.5em;
+    }
+
     #navbar ul{
         justify-content: center;
         padding-left: 0;
@@ -606,17 +659,21 @@ footer li{
 
     }
     .icon{
-        margin-top: -7em;
-        margin-right: 7em;
+        margin: unset;
     }
 
     .icon-cite{
-        margin-right: .75em;
-        margin-top: 1em;
+        margin-right: -6em;
+        margin-top: 1.9em;
     }
 
-    #email{
-        margin-right: 2em;
+    #icon-container{
+        flex-direction: column;
+        margin-top: -12em;
+        height: 13em;
+        justify-content: space-around;
+        width: 5em;
+        margin-right: 0;
     }
     .column-container{
         flex-direction: column;
@@ -639,6 +696,16 @@ footer li{
         padding-left: 5%;
         width: 90%;
         padding-right: 5%;
+    }
+
+    .card{
+        width: 75%;
+        padding: 1.5em;
+        line-height: 1.75em;
+    }
+
+    .card:hover{
+
     }
 
 }
