@@ -111,10 +111,10 @@ footer ul{
     display: flex;
     flex-direction: row;
 
-    animation-name: nav;
+    /* animation-name: nav;
     animation-duration: 2s;
     animation-delay: 3s;
-    animation-fill-mode: both;
+    animation-fill-mode: both; */
 }
 
 footer li{
@@ -413,12 +413,12 @@ footer li{
     width: 50px;
     margin: -2em 1% 1em 2em;
 
-    animation-name: nav;
+    /* animation-name: nav;
     animation-duration: 2s;
     animation-delay: 5s;
     animation-fill-mode: both;
 
-    transition-duration: 0.5s;
+    transition-duration: 0.5s; */
 }
 
 #icon-container{
@@ -613,6 +613,26 @@ footer li{
 #skill-buttons button:hover{
     cursor: pointer;
     background-color: dodgerblue;
+}
+
+
+.hide-for-fade-in {
+    opacity: 0%  !important;
+    margin-right: 30px  !important;
+    -webkit-transition: all 1.0s;
+    -o-transition:  all 1.0s;
+    transition:  all 1.0s;
+}
+
+
+.fade-in-footer-menu {
+    opacity: 100% !important;
+    margin-right: 0 !important;
+}
+
+.fade-in-footer-icons {
+    opacity: 100% !important;
+    margin-right: 1em !important;
 }
 
 @media screen and (max-width: 600px){

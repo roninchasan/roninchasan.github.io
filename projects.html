@@ -10,7 +10,6 @@
     <meta name="description" content="This page contains a portfolio of each of the software, web development, and data science projects that I have completed.">
     <meta name="keywords" content="Ronin Chasan, Web Dev, Software, Data Science">
     <meta name="author" content="Ronin Chasan">
-    <script src="scripts/script.js"></script>
 </head>
 
 <body>
@@ -182,7 +181,7 @@
     </div>
 
     <footer>
-        <nav id ="footer-menu">
+        <nav id ="footer-menu" class="toFadeIn">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="resume.html">Résumé</a></li>
@@ -190,7 +189,7 @@
                 <li><a href="projects.html">Projects</a></li>
             </ul>
         </nav>
-        <div id="icon-container">
+        <div id="icon-container" class="toFadeInIcons">
             <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/roninchasan">
                 <img alt="Github Icon" src="../images/github.png" class="icon" id="github">
             </a>
@@ -205,6 +204,7 @@
     </footer>
 </body>
 
+<script src="scripts/script.js"></script>
 
     <script>
         let cookie = getCookie("repeat-visit-projects");
