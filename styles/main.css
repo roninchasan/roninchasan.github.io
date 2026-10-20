@@ -181,18 +181,18 @@ footer li{
 }
 
 #navbar li :hover {
-    color: grey;    
+    color: lightgrey;    
 }
 
 #navbar-first li :hover {
-    color: grey;    
+    color: lightgrey;    
 }
 
 #navbar a, #navbar-first a{
     color: white;
     text-decoration: none;
 
-    transition-duration: 0.35s;
+    transition-duration: 0.25s;
 }
 
 .container{
@@ -225,10 +225,9 @@ footer li{
 @media screen and (min-width: 787px){
     .card:hover{
         width: 69%;
-        font-size: 1.2em;
+        font-size: 1.1em;
         opacity: 100%;
         margin: 1em auto 1em auto;
-
     }
 
     .card:hover h3{
@@ -409,9 +408,10 @@ footer li{
 }
 
 .icon{
-    height:50px;
-    width: 50px;
+    height: 36px;
+    width: 36px;
     margin: -2em 1% 1em 2em;
+    transition: all 0.25s;
 
     /* animation-name: nav;
     animation-duration: 2s;
